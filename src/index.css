@@ -7,3 +7,14 @@
   font-family: "estedad";
   src: url("./assets/Font/ESTEDAD-MEDIUM.TTF");
 }
+
+.lalezar{
+  font-family: lalezar;
+}
+.estedad{
+  font-family: estedad;
+}
+
+body{
+  background-color: #F1F6F9 !important;
+}
