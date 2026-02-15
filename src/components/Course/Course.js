@@ -5,29 +5,29 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { PiUsersThreeFill } from "react-icons/pi";
 
-function Course() {
+function Course(props) {
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://dl.next1code.ir/images/courses/typescript.png" />
+        <Card>
+            <Card.Img variant="top" src={props.img} />
             <span className="students estedad d-flex align-items-center justify-content-between"> 
                 <PiUsersThreeFill className="fs-5"/>
-                215
+                {props.students}
             </span>
             <Card.Body>
-                <Card.Title className="lalezar fs-3">موضوع</Card.Title>
+                <Card.Title className="lalezar fs-3">{props.title}</Card.Title>
                 <Card.Text className="estedad my-4">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                    {props.desc}
                 </Card.Text>
                 <hr />
                 <div className="cardFooter">
                     <p className="estedad d-flex justify-content-between">
                         <span>
                             <FaChalkboardTeacher className="fs-4" />
-                            : سهیل حسینی
+                            : {props.teacher}
                         </span>
                         <span>
                             <IoMdTime className="fs-4" />
-                            : 50 دقیقه
+                            : {props.time} دقیقه
                         </span>
                     </p>
                 </div>

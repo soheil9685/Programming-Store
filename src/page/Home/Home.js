@@ -6,14 +6,20 @@ import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect, useState } from "react";
 import Course from "../../components/Course/Course";
+import axios from "axios";
 
 function Home() {
 
-    const[courses , setCourses] = useState([]);
+    const [courses, setCourses] = useState([]);
 
-    useEffect(()=>{
-        axios.get
+    let arr = ["apple", "orange"]
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/courses")
+            .then(response => setCourses(response.data))
     }, [])
+
+    console.log(courses)
 
     useEffect(() => {
         Aos.init();
@@ -24,7 +30,7 @@ function Home() {
             <div className="Header">
                 <MyNav />
                 <Container>
-                    <Row className="mt-5 d-flex align-items-center">
+                    <Row className="mt-5 d-flex align-items-center row-cols-1 row-cols-lg-2 gy-3">
                         <Col data-aos="fade-left">
                             <img className="HeaderImage w-75" src={HeaderImg} alt="" />
                         </Col>
@@ -42,8 +48,14 @@ function Home() {
             </svg>
             <section id="courses">
                 <Container>
-                    <h2 className="lalezar mb-4">دوره های آموزشی</h2>
-                    <Course />
+                    <h2 className="lalezar mb-4 text-center">دوره های آموزشی</h2>
+                    <Row className="gy-3">
+                        {courses.map(course => (
+                            <Col className="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <Course {...course} />
+                            </Col>
+                        ))}
+                    </Row>
                 </Container>
             </section>
         </>

@@ -30,7 +30,7 @@ function MyNav() {
                     <Offcanvas.Body>
                         <Nav className="justify-content-end flex-grow-1 pe-3">
                             <Nav.Link className="estedad active" href="/">صفحه اصلی</Nav.Link>
-                            <Nav.Link className="estedad" href="/courses">دوره ها</Nav.Link>
+                            <Nav.Link className="estedad" href="/add-course">افزودن دوره</Nav.Link>
                             <Nav.Link className="estedad" href="/about">درباره ما</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>

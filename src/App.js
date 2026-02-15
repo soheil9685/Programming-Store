@@ -14,7 +14,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/add-course" element={<AddCourse />} />
-        <Route path="/courses" element={<Courses />} />
         <Route path="/edit-course/:courseId" element={<EditCourse />} />
         <Route path="/course/:courseId" element={<Course />} />
       </Routes>
