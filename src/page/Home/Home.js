@@ -4,12 +4,16 @@ import { Col, Container, Row } from "react-bootstrap";
 import HeaderImg from "../../assets/Image/Header.jpg"
 import Aos from "aos";
 import "aos/dist/aos.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Course from "../../components/Course/Course";
 
 function Home() {
 
-    
+    const[courses , setCourses] = useState([]);
+
+    useEffect(()=>{
+        axios.get
+    }, [])
 
     useEffect(() => {
         Aos.init();
