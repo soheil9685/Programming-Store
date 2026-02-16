@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { PiUsersThreeFill } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 function Course(props) {
     return (
@@ -18,6 +19,9 @@ function Course(props) {
                 <Card.Text className="estedad my-4">
                     {props.desc}
                 </Card.Text>
+                <Link to={`/course/${props.id}`}>
+                    <Button className="viewCourse">مشاهده دوره</Button>
+                </Link>
                 <hr />
                 <div className="cardFooter">
                     <p className="estedad d-flex justify-content-between">
