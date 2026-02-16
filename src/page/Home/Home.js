@@ -51,7 +51,7 @@ function Home() {
                     <h2 className="lalezar mb-4 text-center">دوره های آموزشی</h2>
                     <Row className="gy-3">
                         {courses.map(course => (
-                            <Col className="col-12 col-md-6 col-lg-4 col-xl-3">
+                            <Col key={course.id} className="col-12 col-md-6 col-lg-4 col-xl-3">
                                 <Course {...course} />
                             </Col>
                         ))}
