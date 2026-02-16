@@ -67,7 +67,7 @@ function Course() {
                                 {courseData.time} دقیقه
                             </p>
                             <div className="btnContainer d-flex justify-content-center">
-                                <Link className="me-3">
+                                <Link to={`/edit-course/${id}`} className="me-3">
                                     <Button style={{ fontFamily: "estedad" }} variant="outline-primary">
                                         <FaEdit className="me-2" />
                                         ویرایش
