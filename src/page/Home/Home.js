@@ -12,14 +12,10 @@ function Home() {
 
     const [courses, setCourses] = useState([]);
 
-    let arr = ["apple", "orange"]
-
     useEffect(() => {
         axios.get("http://localhost:5000/courses")
             .then(response => setCourses(response.data))
     }, [])
-
-    console.log(courses)
 
     useEffect(() => {
         Aos.init();
