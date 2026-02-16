@@ -35,6 +35,14 @@ function AddCourse() {
                     timer: 1500
                 });
             })
+        setFormData({
+            title: "",
+            desc: "",
+            img: "",
+            teacher: "",
+            time: "",
+            students: ""
+        })
     }
 
     return (
@@ -44,27 +52,27 @@ function AddCourse() {
                 <Form>
                     <Form.Group className="estedad my-3">
                         <Form.Label>موضوع:</Form.Label>
-                        <Form.Control type="text" name="title" onChange={formHandler} placeholder="موضوع دوره را وارد کنید" required />
+                        <Form.Control value={formData.title} type="text" name="title" onChange={formHandler} placeholder="موضوع دوره را وارد کنید" required />
                     </Form.Group>
                     <Form.Group className="estedad my-3">
                         <Form.Label>شرح:</Form.Label>
-                        <Form.Control type="text" name="desc" onChange={formHandler} placeholder="شرح دوره را وارد کنید" required />
+                        <Form.Control value={formData.desc} type="text" name="desc" onChange={formHandler} placeholder="شرح دوره را وارد کنید" required />
                     </Form.Group>
                     <Form.Group className="estedad my-3">
                         <Form.Label>عکس:</Form.Label>
-                        <Form.Control type="text" name="img" onChange={formHandler} placeholder="پیوند عکس را وارد کنید" required />
+                        <Form.Control value={formData.img} type="text" name="img" onChange={formHandler} placeholder="پیوند عکس را وارد کنید" required />
                     </Form.Group>
                     <Form.Group className="estedad my-3">
                         <Form.Label>مدرس:</Form.Label>
-                        <Form.Control type="text" name="teacher" onChange={formHandler} placeholder="مدرس دوره را وارد کنید" required />
+                        <Form.Control value={formData.teacher} type="text" name="teacher" onChange={formHandler} placeholder="مدرس دوره را وارد کنید" required />
                     </Form.Group>
                     <Form.Group className="estedad my-3">
                         <Form.Label>مدت زمان:</Form.Label>
-                        <Form.Control type="number" name="time" onChange={formHandler} min={0} required />
+                        <Form.Control value={formData.time} type="number" name="time" onChange={formHandler} min={0} required />
                     </Form.Group>
                     <Form.Group className="estedad my-3">
                         <Form.Label>تعداد دانشجو:</Form.Label>
-                        <Form.Control type="number" name="students" onChange={formHandler} min={0} required />
+                        <Form.Control value={formData.students} type="number" name="students" onChange={formHandler} min={0} required />
                     </Form.Group>
                     <Button onClick={submitHandler} variant="primary" type="button">
                         ثبت دوره
