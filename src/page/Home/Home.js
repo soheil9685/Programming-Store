@@ -7,6 +7,7 @@ import "aos/dist/aos.css"
 import { useEffect, useState } from "react";
 import Course from "../../components/Course/Course";
 import axios from "axios";
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
 
@@ -54,6 +55,7 @@ function Home() {
                     </Row>
                 </Container>
             </section>
+            <Footer />
         </>
     )
 }
